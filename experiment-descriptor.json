@@ -71,7 +71,7 @@
         "unit-type": "task",
         "label": "Bubble Sort Exercise",
         "content-type": "simulation",
-        "source": "./simulation/bsexercise.md",
+        "source": "./simulation/bsexercise.html",
         "target": "./bsexercise.html"
       },
       {
@@ -102,7 +102,7 @@
         "unit-type": "task",
         "label": "Optimized Bubble Sort Demo",
         "content-type": "simulation",
-        "source": ".simulation/opt-bs-demo.html",
+        "source": "./simulation/opt-bs-demo.html",
         "target": "./opt-bs-demo.html"
       },
       {
@@ -140,7 +140,7 @@
         "unit-type": "task",
         "label": "Time and Space Complexity",
         "content-type": "simulation",
-        "source": ".simulation/time-and-space-complexity.html",
+        "source": "./simulation/time-and-space-complexity.html",
         "target": "./time-and-space-complexity.html"
       },
       {
