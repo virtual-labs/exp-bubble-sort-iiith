@@ -1,5 +1,3 @@
-## Time and Space Complexity  
-
 ### Running Time of Bubble Sort
 
 Lets assume that we are sorting **N** elements of a given array using SIMPLE Bubble Sort.

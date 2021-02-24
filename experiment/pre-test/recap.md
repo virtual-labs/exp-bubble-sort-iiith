@@ -1,5 +1,3 @@
-##  Recap  
-
 ### What is Sorting?
 Given a list of random numbers, sorting means ordering the numbers in either ascending or descending order. By default, we sort numbers in an ascending order.
 

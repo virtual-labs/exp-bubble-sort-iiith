@@ -1,5 +1,3 @@
-## Further Readings/References  
-
 ### Explore More About Bubble Sort
 
 You can explore more about Bubble Sort Experiment through following resources:

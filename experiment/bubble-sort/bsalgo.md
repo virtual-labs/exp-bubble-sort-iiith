@@ -1,5 +1,3 @@
-## Bubble Sort Algorithm
-
 ### Algorithm of Bubble Sort
 Let's have a final look at the consolidated algorithm to sort an array of N elements:
 
