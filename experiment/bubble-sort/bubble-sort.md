@@ -1,5 +1,3 @@
-## Bubble Sort 
-
 ### Estimated Time
 15 minutes
 

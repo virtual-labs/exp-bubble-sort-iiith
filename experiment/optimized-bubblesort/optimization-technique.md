@@ -1,5 +1,3 @@
-## Optimization Technique 
-
 ### Optimization Technique
 
 Now that we have seen and understood how Bubble Sort works, let's take note of a few observations :

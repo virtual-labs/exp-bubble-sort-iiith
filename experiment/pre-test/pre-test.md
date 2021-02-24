@@ -1,5 +1,3 @@
-## Pre-Test  
-
 ### Estimated Time
 
 10 minutes

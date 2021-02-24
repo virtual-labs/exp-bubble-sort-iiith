@@ -1,5 +1,3 @@
-## Bubble Sort Experiment
-
 ### Estimated Time
 
 1 hour

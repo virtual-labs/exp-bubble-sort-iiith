@@ -1,5 +1,3 @@
-## Stability of Bubble Sort
-
 ### What is a Stable Sort Algorithm?
 
 A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appeared in the input unsorted array. For example, look at the picture below. The unsorted array has two elements with value 23. Note the order of both these elements in the stable and unstable sorted arrays.

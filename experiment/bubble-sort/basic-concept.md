@@ -1,5 +1,3 @@
-## Basic Concept
-
 ### How can we sort an array?
 
 In Bubble Sort, we take the simplest possible approach to sort an array.
