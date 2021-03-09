@@ -121,7 +121,7 @@
         {
       "unit-type": "lu",
       "label": "Analysis",
-      "basedir": "Analysis",
+      "basedir": "analysis",
       "units": [
         {
           "unit-type": "aim"
