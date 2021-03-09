@@ -1,10 +1,3 @@
-### Estimated Time
-15 minutes
-
-### Demonstration of Bubble Sort Concept
-
-<iframe src="https://www.youtube.com/embed/ph-C6sUyzE4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
 ### Learning Objectives of this Module
 
 In this module, we will :
