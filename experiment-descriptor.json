@@ -44,10 +44,10 @@
         },
         {
           "unit-type": "task",
-          "label": "Simulation",
+          "label": "Demo",
           "content-type": "simulation",
           "source": "simulation/bsdemo.html",
-          "target": "simulation.html"
+          "target": "bsdemo.html"
         },
 	{
           "unit-type": "task",
