@@ -69,7 +69,7 @@
          "content-type": "assesment",
          "source": "bubble-sort-quiz.js",
          "target": "bubble-sort-quiz.html"
-       },
+       }
       
       ]
     },
@@ -115,7 +115,7 @@
           "content-type": "simulation",
           "source": "simulation/opt-bs-practice.html",
           "target": "simulation.html"
-        },
+        }
       ]
     },
         {
@@ -167,7 +167,7 @@
           "content-type": "assesment",
           "source": "analysis-quiz.js",
           "target": "analysis-quiz.js"
-        },
+        }
       ]
     },
     {
