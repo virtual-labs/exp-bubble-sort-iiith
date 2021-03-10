@@ -42,6 +42,20 @@
           "source": "overview.md",
           "target": "overview.html"
         },
+	{
+          "unit-type": "task",
+          "label": "Basic Concept",
+          "content-type": "video",
+          "source": "basic-concept.md",
+          "target": "basic-concept.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "Bubble Sort Algorithm",
+          "content-type": "video",
+          "source": "bsalgo.md",
+          "target": "bsalgo.html"
+        },
         {
           "unit-type": "task",
           "label": "Demo",
@@ -49,23 +63,24 @@
           "source": "simulation/bsdemo.html",
           "target": "bsdemo.html"
         },
-	{
-          "unit-type": "task",
-          "label": "Simulation",
-          "content-type": "simulation",
-          "source": "simulation/bsexercise.html",
-          "target": "simulation.html"
-        },
         {
           "unit-type": "task",
-          "label": "Simulation",
+          "label": "Practice",
           "content-type": "simulation",
           "source": "simulation/bspractice.html",
-          "target": "simulation.html"
+          "target": "bspractice.html"
         },
 	{
+          "unit-type": "task",
+          "label": "Exercise",
+          "content-type": "simulation",
+          "source": "simulation/bsexercise.html",
+          "target": "bsexercise.html"
+        },
+        
+	{
          "unit-type": "task",
-         "label": "Pre Test",
+         "label": "Bubble Sort Quiz",
          "content-type": "assesment",
          "source": "bubble-sort-quiz.js",
          "target": "bubble-sort-quiz.html"
@@ -97,25 +112,32 @@
         },
         {
           "unit-type": "task",
-          "label": "Simulation",
+          "label": "Demo",
           "content-type": "simulation",
           "source": "simulation/opt-bs-demo.html",
-          "target": "simulation.html"
+          "target": "opt-bs-demo.html"
         },
 	{
           "unit-type": "task",
-          "label": "Simulation",
-          "content-type": "simulation",
-          "source": "simulation/opt-bs-exercise.html",
-          "target": "simulation.html"
-        },
-        {
-          "unit-type": "task",
-          "label": "Simulation",
+          "label": "Practice",
           "content-type": "simulation",
           "source": "simulation/opt-bs-practice.html",
-          "target": "simulation.html"
-        }
+          "target": "opt-bs-practice.html"
+        },
+	{
+          "unit-type": "task",
+          "label": "Exercise",
+          "content-type": "simulation",
+          "source": "simulation/opt-bs-exercise.html",
+          "target": "opt-bs-exercise.html"
+        },
+        {
+         "unit-type": "task",
+         "label": "Optimized Bubble Sort Quiz",
+         "content-type": "assesment",
+         "source": "opt-bs-quiz.js",
+         "target": "opt-bs-quiz.html"
+       }
       ]
     },
         {
@@ -142,10 +164,10 @@
         },
         {
           "unit-type": "task",
-          "label": "Simulation",
+          "label": "Demo",
           "content-type": "simulation",
           "source": "simulation/time-and-space-complexity.html",
-          "target": "simulation.html"
+          "target": "time-and-spce-complexity.html"
         },
         {
           "unit-type": "task",
@@ -156,14 +178,14 @@
         },
 	{
           "unit-type": "task",
-          "label": "comparison-with-other-algorithms",
+          "label": "Comparison with other Algorithms",
           "content-type": "video",
           "source": "comparison-with-other-algorithms.md",
           "target": "comparison-with-other-algorithms.html"
         },
         {
           "unit-type": "task",
-          "label": "analysis-quiz",
+          "label": "Analysis Quiz",
           "content-type": "assesment",
           "source": "analysis-quiz.js",
           "target": "analysis-quiz.js"
@@ -180,7 +202,7 @@
        
     {
       "unit-type": "task",
-      "label": "Further Reading",
+      "label": "Further Readings/References",
       "content-type": "text",
       "source": "further-reading-and-references.md",
       "target": "further-reading-and-references.html"
