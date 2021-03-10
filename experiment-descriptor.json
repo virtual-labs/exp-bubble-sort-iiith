@@ -98,7 +98,7 @@
         },
 	{
           "unit-type": "task",
-          "label": "overview",
+          "label": "Overview",
           "content-type": "video",
           "source": "overview.md",
           "target": "overview.html"
