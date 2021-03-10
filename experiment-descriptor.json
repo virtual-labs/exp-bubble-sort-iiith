@@ -51,7 +51,7 @@
         },
         {
           "unit-type": "task",
-          "label": "Bubble Sort Algorithm",
+          "label": "Algorithm",
           "content-type": "video",
           "source": "bsalgo.md",
           "target": "bsalgo.html"
@@ -80,7 +80,7 @@
         
 	{
          "unit-type": "task",
-         "label": "Bubble Sort Quiz",
+         "label": "Quiz",
          "content-type": "assesment",
          "source": "bubble-sort-quiz.js",
          "target": "bubble-sort-quiz.html"
@@ -133,7 +133,7 @@
         },
         {
          "unit-type": "task",
-         "label": "Optimized Bubble Sort Quiz",
+         "label": "Quiz",
          "content-type": "assesment",
          "source": "opt-bs-quiz.js",
          "target": "opt-bs-quiz.html"
@@ -164,7 +164,7 @@
         },
         {
           "unit-type": "task",
-          "label": "Demo",
+          "label": "Time and Space Complexity Demo",
           "content-type": "simulation",
           "source": "simulation/time-and-space-complexity.html",
           "target": "time-and-spce-complexity.html"
@@ -185,7 +185,7 @@
         },
         {
           "unit-type": "task",
-          "label": "Analysis Quiz",
+          "label": "Quiz",
           "content-type": "assesment",
           "source": "analysis-quiz.js",
           "target": "analysis-quiz.js"
