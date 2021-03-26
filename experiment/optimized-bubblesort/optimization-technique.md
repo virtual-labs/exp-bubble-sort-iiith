@@ -1,3 +1,6 @@
+### Demonstration of Optimized Bubble Sort Concept
+<iframe src="https://www.youtube.com/embed/8Z2yvFHNnbk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 ### Optimization Technique
 
 Now that we have seen and understood how Bubble Sort works, let's take note of a few observations :
