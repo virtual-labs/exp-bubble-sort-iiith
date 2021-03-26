@@ -3,7 +3,7 @@
 
 ### Learning Objectives of this Module
 
-In this module, we will :
+In this module, we will be learning about:
 
   - Gain the intuition for Bubble Sort
   - Learn when and how to swap incorrectly ordered elements
