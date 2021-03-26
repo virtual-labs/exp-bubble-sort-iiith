@@ -38,7 +38,7 @@
        
 	{
           "unit-type": "task",
-          "label": "Basic Concept",
+          "label": "Concept",
           "content-type": "video",
           "source": "basic-concept.md",
           "target": "basic-concept.html"
