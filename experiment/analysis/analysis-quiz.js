@@ -115,8 +115,8 @@
       answers: {
         a: "O(n) ",                  ///// Write the option 1 inside double quotes
         b: "O(n<sup>2</sup>)",                  ///// Write the option 2 inside double quotes
-	a: " Somewhere in between N and N<sup>2</sup> ",                  ///// Write the option 1 inside double quotes
-        b: "None of the above",                  ///// Write the option 2 inside double quotes
+	c: " Somewhere in between N and N<sup>2</sup> ",                  ///// Write the option 1 inside double quotes
+        d: "None of the above",                  ///// Write the option 2 inside double quotes
               },
       correctAnswer: "b"                ///// Write the correct option inside double quotes
     },
