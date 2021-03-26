@@ -2,7 +2,7 @@
 15 minutes
 
 ### Learning Objectives of this Module
-In this module, we will :
+In this module, we will be learning about :
 
   - Observe some characteristics of the algorithm.
 
