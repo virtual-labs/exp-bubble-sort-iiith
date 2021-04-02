@@ -22,6 +22,7 @@ jobs:
         cd ph3-lab-mgmt
         chmod +x run.sh
         ./run.sh
+        git commit -m "https://virtual-labs.github.io/${{ github.repository }} click on the link to test your code."
     - uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.ORG_OWNER_GITHUB_TOKEN }}
