@@ -1,4 +1,4 @@
-
+ 
 # This workflow is used to build the experiment and push it to github pages
 
 name: Deploy Testing Branch
@@ -22,7 +22,7 @@ jobs:
         cd ph3-lab-mgmt
         npm install
         npm run build-exp
-        cd ../ 
+        cd ../
         git config --local user.email "admin@vlabs.ac.in"
         git config --local user.name "vleadadmin"
         git checkout --orphan gh-pages
