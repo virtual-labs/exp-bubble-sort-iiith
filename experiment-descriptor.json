@@ -21,6 +21,13 @@
       "target": "recap.html"
     },
     {
+      "unit-type": "task",
+      "label": "Pre Test Quiz",
+      "content-type": "assesment",
+      "source": "pretest.json",
+      "target": "pretest.html"
+    },
+    {
       "unit-type": "lu",
       "label": "Bubble Sort",
       "basedir": "bubble-sort",
@@ -63,7 +70,15 @@
           "content-type": "simulation",
           "source": "simulation/bsexercise.html",
           "target": "bsexercise.html"
-        }
+        },
+        
+	{
+         "unit-type": "task",
+         "label": "Quiz",
+         "content-type": "assesment",
+         "source": "bubble-sort-quiz.json",
+         "target": "bubble-sort-quiz.html"
+       }
       
       ]
     },
@@ -103,7 +118,14 @@
           "content-type": "simulation",
           "source": "simulation/opt-bs-exercise.html",
           "target": "opt-bs-exercise.html"
-        }
+        },
+        {
+         "unit-type": "task",
+         "label": "Quiz",
+         "content-type": "assesment",
+         "source": "opt-bs-quiz.json",
+         "target": "opt-bs-quiz.html"
+       }
       ]
     },
         {
@@ -148,8 +170,23 @@
           "content-type": "video",
           "source": "comparison-with-other-algorithms.md",
           "target": "comparison-with-other-algorithms.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "Quiz",
+          "content-type": "assesment",
+          "source": "analysis-quiz.json",
+          "target": "analysis-quiz.html"
         }
       ]
+    },
+    
+    {
+      "unit-type": "task",
+      "label": "Post Test Quiz",
+      "content-type": "assesment",
+      "source": "posttest.json",
+      "target": "posttest.html"
     },
        
     {
