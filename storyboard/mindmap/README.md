@@ -3,5 +3,5 @@
 ## Mindmap
 <center><img src="mindmap.png"> <br></center>
 
-## Mindmap of bubble sort
+## Mindmap of Bubble Sort
 <center><img src="mindmap-bubble-sort.png"> <br></center>
