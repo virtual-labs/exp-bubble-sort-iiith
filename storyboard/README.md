@@ -1,4 +1,4 @@
-#### Please use the [reference](https://github.com/virtual-labs/https://github.com/virtual-labs/exp-bubble-sort-iiith/blob/main/storyboard/README.md) document to fill this template. Follow the [link](https://github.com/virtual-labs/exp-bubble-sort-iiith/tree/main/storyboard) to view a sample storyboard document. 
+#### Please use the [reference](https://github.com/virtual-labs/exp-bubble-sort-iiith/blob/main/storyboard/README.md) document to fill this template. Follow the [link](https://github.com/virtual-labs/exp-bubble-sort-iiith/tree/main/storyboard) to view a sample storyboard document. 
 
 
 # Storyboarding for Bubble Sort Experiment
