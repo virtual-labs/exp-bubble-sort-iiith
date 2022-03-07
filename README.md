@@ -25,5 +25,4 @@ SrNo | Name | Faculty or Student | Department| Institute | Email id
 3 | Ashwin | Student | Computer Science and Engineering | IIIT Hyderabad, Hyderabad | ashwin05k@gmail.com
 
 
-
 <br>
