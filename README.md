@@ -1,23 +1,28 @@
-## Introduction
+## Introduction 
 
-<b>Discipline | <b>Fill your discipline name here
+<br>
+
+<b>Discipline | <b> Computer Science and Engineering
 :--|:--|
-<b> Lab | <b> Fill your lab name here
-<b> Experiment|     <b> Fill your experiment name and number here
+<b> Lab | <b> Data Structures
+<b> Experiment|     <b> Bubble Sort Algorithm
 
-### About the Experiment 
+<h5> About the Experiment : </h5> 
+This experiment is to verify the Bubble Sort, Optimized Bubble Sort and Time and Space Complexity of Bubble Sort Algorithms of Demos, Practice and Hands on Exercise to undertand Bubble sort Algorithms easily.  <br> <br>
 
-Fill a brief description of this experiment here
-
-<b>Name of Developer | <b> Fill the name of experiment owner here 
+<b>Name of Developer | <b> Prof. Venkatesh Choppella
 :--|:--|
-<b> Institute | <b>  
-<b> Email id|     <b>  
-<b> Department |  
+<b> Institute | <b> IIIT Hyderabad
+<b> Email id|     <b> venkatesh.choppella@iiit.ac.in
+<b> Department | Computer Science and Engineering
 
-### Contributors List
+#### Contributors List
 
 SrNo | Name | Faculty or Student | Department| Institute | Email id
 :--|:--|:--|:--|:--|:--|
-1 | . | . | . | . | .
-2 | . | . | . | . | .
+1 | Aashna | Student | Computer Science and Engineering | IIIT Hyderabad, Hyderabad | aashna.jena@research.iiit.ac.in 
+2 | Dvijaywargiya | Student| Computer Science and Engineering | IIIT Hyderabad, Hyderabad | dvijaywargiya@gmail.com 
+3 | Ashwin | Student | Computer Science and Engineering | IIIT Hyderabad, Hyderabad | ashwin05k@gmail.com
+
+
+<br>
