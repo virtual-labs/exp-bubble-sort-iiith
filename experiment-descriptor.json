@@ -2,6 +2,11 @@
   "unit-type": "lu",
   "label": "Bubble Sort Experiment",
   "basedir": ".",
+  "code-assessment": {
+    "include": true,
+    "languages": ["javascript"],
+    "position": 5
+  },
   "units": [
     {
       "unit-type": "aim"
