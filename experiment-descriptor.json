@@ -5,7 +5,7 @@
   "code-assessment": {
     "include": true,
     "languages": ["javascript"],
-    "position": 5
+    "position": 6
   },
   "units": [
     {
