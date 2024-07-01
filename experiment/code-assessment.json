@@ -10,7 +10,8 @@
             ],
             "expected": [11,20,49,64,66,79],
             "inputs description": "Input consists of an array of unsorted array - inp1. It may be of arbitrary length.",
-            "expected description": "An array of numbers Eg. 1,2,4,5 sorted in ascending orders"
+            "expected description": "An array of numbers Eg. 1,2,4,5 sorted in ascending orders",
+            "difficulty": "beginner"
         },
         {
             "problem name": "Optimized Bubble Sort",
@@ -20,7 +21,8 @@
             ],
             "expected": [2,9,10,24,59,100,258,300],
             "inputs description": "Input consists of an array of unsorted array - inp1. It may be of arbitrary length.",
-            "expected description": "An array of numbers Eg. 1,2,4,5 sorted in ascending orders"
+            "expected description": "An array of numbers Eg. 1,2,4,5 sorted in ascending orders",
+            "difficulty": "intermediate"
         }
     ]
 }
