@@ -161,66 +161,83 @@ function next_step() {
 
 function makeQuestion() {
   bubble_artefact.rand_num = Math.floor(Math.random() * 6) + 2;
-  if (
-    bubble_artefact.rand_num == 4 ||
-    bubble_artefact.rand_num == 5 ||
-    bubble_artefact.rand_num == 6 ||
-    bubble_artefact.rand_num == 7 ||
-    bubble_artefact.rand_num == 8 ||
-    bubble_artefact.rand_num == 9
-  )
+
+  if (bubble_artefact.rand_num == 2) {
+    document.getElementById("question").innerHTML =
+      "<b>Question :</b>Find the difference between the largest and the " +
+      bubble_artefact.rand_num +
+      "nd largest elements from the following array. Report the difference and the number of iterations you need to run in order to <b>determine</b> the " +
+      bubble_artefact.rand_num +
+      "nd largest element required to get to the answer.<br>(Hint: Remember the observations we made for each iteration)<br><br><br>";
+  } else if (bubble_artefact.rand_num == 3) {
+    document.getElementById("question").innerHTML =
+      "<b>Question :</b>Find the difference between the largest and the " +
+      bubble_artefact.rand_num +
+      "rd largest elements from the following array. Report the difference and the number of iterations you need to run in order to <b>determine</b> the " +
+      bubble_artefact.rand_num +
+      "rd largest element required to get to the answer.<br>(Hint: Remember the observations we made for each iteration).<br><br><br>";
+  } else {
     document.getElementById("question").innerHTML =
       "<b>Question :</b> Find the difference between the largest and the " +
       bubble_artefact.rand_num +
       "th largest elements from the following array. Report the difference and the number of iterations you need to run in order to <b>determine</b> the " +
       bubble_artefact.rand_num +
       "th largest element required to get to the answer.<br>(Hint: Remember the observations we made for each iteration)<br><br><br>";
-  if (bubble_artefact.rand_num == 2)
-    document.getElementById("question").innerHTML =
-      "<b>Question :</b>Find the difference between the largest and the " +
-      bubble_artefact.rand_num +
-      "nd largest elements from the following array. Report the difference and the number of iterations you need to run in order to <b>determine</b> the " +
-      bubble_artefact.rand_num +
-      "th largest element required to get to the answer.<br>(Hint: Remember the observations we made for each iteration)<br><br><br>";
-  if (bubble_artefact.rand_num == 3)
-    document.getElementById("question").innerHTML =
-      "<b>Question :</b>Find the difference between the largest and the " +
-      bubble_artefact.rand_num +
-      "rd largest elements from the following array. Report the difference and the number of iterations you need to run in order to <b>determine</b> the " +
-      bubble_artefact.rand_num +
-      "th largest element required to get to the answer.<br>(Hint: Remember the observations we made for each iteration).<br><br><br>";
-  bubble_artefact.copy_array.sort();
+  }
+
+  bubble_artefact.copy_array.sort(function (a, b) {
+    return a - b;
+  });
+
   // Calculate difference between largest and kth largest element
   bubble_artefact.answer1 =
     bubble_artefact.copy_array[bubble_artefact.numOfCards - 1] -
     bubble_artefact.copy_array[
       bubble_artefact.numOfCards - bubble_artefact.rand_num
     ];
-  // Fix: For optimized bubble sort, k-1 iterations are needed to determine kth largest element
-  bubble_artefact.answer2 = bubble_artefact.rand_num - 1;
+
+  // Fix: For bubble sort, k iterations are needed to determine kth largest element
+  bubble_artefact.answer2 = bubble_artefact.rand_num;
 }
 
 function checkAnswer() {
-  var text1;
-  try {
-    text1 = document.getElementById("textbox").value;
-  } catch (err) {
-    console.log("There is some problem with text input: ", err);
-  }
-  var text2;
-  try {
-    text2 = document.getElementById("textbox1").value;
-  } catch (err) {
-    console.log("There is some problem with text input: ", err);
-  }
-  if (text1 == "" || text2 == "")
+  var text1 = document.getElementById("textbox").value.trim();
+  var text2 = document.getElementById("textbox1").value.trim();
+
+  if (text1 == "" || text2 == "") {
     document.getElementById("ins").innerHTML = "Please enter valid values";
-  else if (text1 > 100 || text2 > 100)
+    return;
+  }
+
+  // Convert to numbers
+  var userAnswer1 = Number(text1);
+  var userAnswer2 = Number(text2);
+
+  // Validate input ranges
+  if (
+    isNaN(userAnswer1) ||
+    isNaN(userAnswer2) ||
+    userAnswer1 < 0 ||
+    userAnswer2 < 0 ||
+    userAnswer1 > 100 ||
+    userAnswer2 > 100
+  ) {
     document.getElementById("ins").innerHTML = "Please enter valid values";
-  // Fix: Convert string inputs to numbers for proper comparison
-  else if (
-    parseInt(text1) === bubble_artefact.answer1 &&
-    parseInt(text2) === bubble_artefact.answer2
+    return;
+  }
+
+  // Debug logging (remove in production)
+  console.log("User answers:", userAnswer1, userAnswer2);
+  console.log(
+    "Correct answers:",
+    bubble_artefact.answer1,
+    bubble_artefact.answer2
+  );
+
+  // Check answers
+  if (
+    userAnswer1 === bubble_artefact.answer1 &&
+    userAnswer2 === bubble_artefact.answer2
   ) {
     document.getElementById("ins").innerHTML = "CORRECT ANSWER";
     document.getElementById("next").disabled = true;
@@ -231,7 +248,11 @@ function checkAnswer() {
     document.getElementById("submit").style.backgroundColor = "grey";
     document.getElementById("reset").style.backgroundColor = "grey";
   } else {
-    document.getElementById("ins").innerHTML = "WRONG ANSWER";
+    document.getElementById("ins").innerHTML =
+      "WRONG ANSWER. Expected: Difference=" +
+      bubble_artefact.answer1 +
+      ", Iterations=" +
+      bubble_artefact.answer2;
     document.getElementById("next").disabled = true;
     document.getElementById("next").style.backgroundColor = "grey";
   }
