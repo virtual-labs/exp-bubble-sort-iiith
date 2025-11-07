@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. Which of the following is an array?",
+      "question": "1. Which of the following represents a homogeneous array (all elements of the same type)?",
       "answers": {
         "a": "[1, 4, 3, 10]",
         "b": "['A', 3, 0, \"Hello world\"]",
@@ -11,10 +11,10 @@
       },
       "correctAnswer": "a",
       "explanations": {
-        "a": "Correct. This is a valid array with integer elements. Arrays can contain elements of the same or different types.",
-        "b": "This is also a valid array containing mixed types (character, integer, and string).",
-        "c": "This is also a valid array containing mixed types (strings, boolean, and character).",
-        "d": "This is also a valid array containing mixed types (boolean, integer, and float)."
+        "a": "Correct. This is a homogeneous array with all integer elements.",
+        "b": "Incorrect. This array contains mixed types (character, integer, and string).",
+        "c": "Incorrect. This array contains mixed types (strings, boolean, and character).",
+        "d": "Incorrect. This array contains mixed types (boolean, integer, and float)."
       },
       "difficulty": "beginner"
     },
@@ -32,6 +32,40 @@
         "b": "Incorrect. -13 is smaller than -10, so they must be swapped.",
         "c": "Correct. This array is properly sorted in ascending order: -1000 < 0 < 14 < 27.",
         "d": "Incorrect. This sequence is in descending order and must be reversed."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which of the following is not a sorting algorithm?",
+      "answers": {
+        "a": "Bubble",
+        "b": "Selection",
+        "c": "Merge",
+        "d": "Binary"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. This is a popular sorting algorithm which is covered by this very experiment.",
+        "b": "Incorrect. This is another popular sorting algorithm.",
+        "c": "Incorrect. This is another popular sorting algorithm.",
+        "d": "Correct. Binary search is not a sorting algorithm but is in fact an algorithm to search for a specific element in a sorted array."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Consider the following array: A = [-1, 9, 4, 8] Identify A[2], i.e, the element with index 2 from the following (assume 0-indexed array).",
+      "answers": {
+        "a": "-1",
+        "b": "9",
+        "c": "4",
+        "d": "8"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Array indexing begins at 0 and this is the 0th element, i.e, A[0].",
+        "b": "Incorrect. Array indexing begins at 0 and this is the element with index 1, i.e, A[1].",
+        "c": "Correct. Array indexing begins at 0 and this is the element with index 2, i.e, A[2].",
+        "d": "Incorrect. Array indexing begins at 0 and this is the element with index 3, i.e, A[3]."
       },
       "difficulty": "beginner"
     },
