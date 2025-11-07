@@ -1,41 +1,56 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. Which of the following statements is true (assume ascending sort order)?",
-            "answers": {
-                "a": "After T iterations, atleast T of the smallest elements will be in their correct positions.",
-                "b": "After T iterations, atleast T random elements will be in their correct positions.",
-                "c": "After T iterations,  a random number of elements will be in their correct positions.",
-                "d": "After T iterations, atleast T of the largest elements will be in their correct positions."
-            },
-            "correctAnswer": "d",
-            "explanations": {},
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "2. To sort an array in descending order, when will we swap two adjacent elements under consideration?",
-            "answers": {
-                "a": "When the ith element is lesser than the (i + 1)th element.",
-                "b": "When the ith element is equal to the (i + 1)th element.",
-                "c": "When the ith element is greater than the (i + 1)th element.",
-                "d": "None of the above."
-            },
-            "correctAnswer": "a",
-            "explanations": {},
-            "difficulty": "beginner"
-        },
-        {
-            "question": "3. Consider the following array: <br> A = [9, -1, -10, 9*, 2] <br> Note that the \u2018*\u2019 is used to mark a distinction between the two 9\u2019s in order to keep track of their order while sorting. Which of the following represents the steps in sorting the above array (assume ascending order)?",
-            "answers": {
-                "a": "[9, -1, -10, 9*, 2] \u2192 [-1, -10, 9, 2, 9*] \u2192 [-10, -1, 2, 9, 9*] \u2192 [-10, -1, 2, 9, 9*] \u2192 [-10, -1, 2, 9, 9*]",
-                "b": "[9, -1, -10, 9*, 2] \u2192 [-1, -10, 9*, 2, 9] \u2192 [-10, -1, 2, 9, 9*] \u2192 [-10, -1, 2, 9*, 9] \u2192 [-10, -1, 2, 9, 9*]",
-                "c": "[9, -1, -10, 9*, 2] \u2192 [-1, -10, 2, 9, 9*] \u2192 [-10, -1, 2, 9, 9*] \u2192 [-10, -1, 2, 9, 9*] \u2192 [-10, -1, 2, 9, 9*]",
-                "d": "[9, -1, -10, 9*, 2] \u2192 [9, -1, 9*, 2, -10] \u2192 [9, 9*, 2, -1, -10] \u2192 [9, 9*, 2, -1, -10] \u2192 [9, 9*, 2, -1, -10]"
-            },
-            "correctAnswer": "a",
-            "explanations": {},
-            "difficulty": "advanced"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Which of the following statements is true (assume ascending sort order)?",
+      "answers": {
+        "a": "After T iterations, atleast T of the smallest elements will be in their correct positions.",
+        "b": "After T iterations, atleast T random elements will be in their correct positions.",
+        "c": "After T iterations, a random number of elements will be in their correct positions.",
+        "d": "After T iterations, atleast T of the largest elements will be in their correct positions."
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. In bubble sort (ascending order), the largest elements bubble to the end, not the smallest elements to the beginning.",
+        "b": "Incorrect. The elements that reach their correct positions are not random - they follow a specific pattern.",
+        "c": "Incorrect. The number of correctly positioned elements after T iterations is predictable, not random.",
+        "d": "Correct. In bubble sort for ascending order, after each iteration, the largest remaining element moves to its correct position at the end. After T iterations, at least T of the largest elements will be correctly positioned."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. To sort an array in descending order, when will we swap two adjacent elements under consideration?",
+      "answers": {
+        "a": "When the ith element is lesser than the (i + 1)th element.",
+        "b": "When the ith element is equal to the (i + 1)th element.",
+        "c": "When the ith element is greater than the (i + 1)th element.",
+        "d": "None of the above."
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. For descending order, we want larger elements first. If the current element is smaller than the next element, we swap them to move the larger element towards the front.",
+        "b": "Incorrect. When elements are equal, no swap is needed as their relative order doesn't matter for sorting.",
+        "c": "Incorrect. If the current element is already greater than the next element, they are in the correct order for descending sort.",
+        "d": "Incorrect. Option (a) correctly describes when to swap for descending order."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Consider the following array: <br> A = [9, -1, -10, 9*, 2] <br> Note that the '*' is used to mark a distinction between the two 9's in order to keep track of their order while sorting. Which of the following represents the steps in sorting the above array (assume ascending order)?",
+      "answers": {
+        "a": "[9, -1, -10, 9*, 2] → [-1, -10, 9, 2, 9*] → [-10, -1, 2, 9, 9*] → [-10, -1, 2, 9, 9*] → [-10, -1, 2, 9, 9*]",
+        "b": "[9, -1, -10, 9*, 2] → [-1, -10, 9*, 2, 9] → [-10, -1, 2, 9, 9*] → [-10, -1, 2, 9*, 9] → [-10, -1, 2, 9, 9*]",
+        "c": "[9, -1, -10, 9*, 2] → [-1, -10, 2, 9, 9*] → [-10, -1, 2, 9, 9*] → [-10, -1, 2, 9, 9*] → [-10, -1, 2, 9, 9*]",
+        "d": "[9, -1, -10, 9*, 2] → [9, -1, 9*, 2, -10] → [9, 9*, 2, -1, -10] → [9, 9*, 2, -1, -10] → [9, 9*, 2, -1, -10]"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. This shows the original 9 moving before 9*, which violates bubble sort's stability property. Equal elements should maintain their relative order.",
+        "b": "Correct. This correctly shows bubble sort maintaining stability - 9* stays before the original 9 throughout the sorting process, and the final sorted array is [-10, -1, 2, 9*, 9].",
+        "c": "Incorrect. This skips intermediate steps and doesn't show the proper bubble sort progression. The transitions are too large for single bubble sort iterations.",
+        "d": "Incorrect. This shows sorting in the wrong direction (elements moving right instead of being properly sorted in ascending order)."
+      },
+      "difficulty": "advanced"
+    }
+  ]
 }
