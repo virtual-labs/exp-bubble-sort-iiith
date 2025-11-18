@@ -1,0 +1,56 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. How many iterations of the outer loop are needed by the algorithm when the input array of size N is already sorted?",
+      "answers": {
+        "a": "0",
+        "b": "1",
+        "c": "N",
+        "d": "2N"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Although the array is sorted, the algorithm requires one iteration to detect that the array is already sorted by observing that no swaps occur.",
+        "b": "Correct. One iteration is required by the algorithm to detect that the array is sorted by observing that no swaps occur during the iteration.",
+        "c": "Incorrect. This would be the number of iterations in the worst case when the array is in reverse order, not when it's already sorted.",
+        "d": "Incorrect. It is not possible for the outer loop to have more than N iterations even in the worst case."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. How many comparisons (same as the number of iterations of the inner loop) are required in the next iteration after T iterations of the outer loop in the optimized algorithm? The array size is N.",
+      "answers": {
+        "a": "N",
+        "b": "N - 1",
+        "c": "N - T - 1",
+        "d": "N - T"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. We can never have N comparisons. Generally, we compare adjacent elements and maximum N - 1 such pairs exist for any array of size N.",
+        "b": "Incorrect. We do not need to compare all adjacent elements each time as after each iteration at least one more element ends up in the right place.",
+        "c": "Correct. After T iterations, T largest elements are correctly positioned at the end. In the next iteration, we need N - T - 1 comparisons.",
+        "d": "Incorrect. This doesn't account for the fact that we need one less comparison than the number of unsorted elements."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "3. How do we check if our array is sorted in order to preemptively stop the optimized algorithm?",
+      "answers": {
+        "a": "Run an extra iteration as part of the current iteration and check that all adjacent elements are in the right order.",
+        "b": "Check if any swaps occurred in the current iteration.",
+        "c": "There is no way to preemptively stop the algorithm, i.e, a minimum of N - 1 iterations is required where N is the array size.",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. While this can be done, there is a more optimal way that doesn't require an extra iteration.",
+        "b": "Correct. We maintain a boolean flag initialized to false at the beginning of each iteration and set it to true whenever a swap occurs. If it remains false at the end of the iteration, no swaps occurred, meaning the array is sorted.",
+        "c": "Incorrect. There is a way to preemptively stop the algorithm when the array becomes sorted before N - 1 iterations.",
+        "d": "Incorrect. Option (b) contains the correct answer."
+      },
+      "difficulty": "intermediate"
+    }
+  ]
+}

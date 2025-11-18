@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "experiment name": "Bubble Sort Implementation",
+  "problems": [
+    {
+      "problem name": "Basic Bubble Sort",
+      "description": "Implement the basic Bubble Sort algorithm to sort an array in ascending order. Bubble Sort works by repeatedly stepping through the list, comparing adjacent elements and swapping them if they are in the wrong order. Compare each pair of adjacent elements and swap if the first is greater than the second, continue until no more swaps are needed. Example: [64,66,20,49,11,79] should become [11,20,49,64,66,79]. Only JavaScript is allowed.",
+      "inputs": [[64, 66, 20, 49, 11, 79]],
+      "expected": [11, 20, 49, 64, 66, 79],
+      "inputs description": "An array of integers that needs to be sorted. The array may be of arbitrary length.",
+      "expected description": "The same array sorted in ascending order.",
+      "difficulty": "beginner"
+    },
+    {
+      "problem name": "Optimized Bubble Sort",
+      "description": "Implement an optimized version of Bubble Sort that reduces unnecessary comparisons by tracking whether any swaps occurred in a pass. If no swaps occur in a complete pass, the array is already sorted and the algorithm can stop early. This optimization is particularly effective for partially sorted arrays. Example: [10,9,24,100,2,300,258,59] should become [2,9,10,24,59,100,258,300]. Only JavaScript is allowed.",
+      "inputs": [[10, 9, 24, 100, 2, 300, 258, 59]],
+      "expected": [2, 9, 10, 24, 59, 100, 258, 300],
+      "inputs description": "An array of integers that needs to be sorted, potentially partially sorted for optimization testing.",
+      "expected description": "The same array sorted in ascending order using optimized bubble sort.",
+      "difficulty": "intermediate"
+    }
+  ]
+}
