@@ -1,68 +1,73 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. What will be the time complexity of the regular unoptimized bubble sort algorithm in the best case, i.e, when the input array is already sorted?",
-            "answers": {
-                "a": "O(N)",
-                "b": "O(N^2)",
-                "c": "O(N log (N))",
-                "d": "O(1)"
-            },
-            "correctAnswer": "b",
-            "explanations": {
-                "a": "The algorithm makes use of 2 loops where 1 is nested within another. Both loops repeat N times where N is the array size (number of array elements) even when the array is already sorted.",
-                "b": "Although the array is already sorted, the regular algorithm will repeat both loops N times each as in the standard case and hence have the normal complexity.",
-                "c": "The algorithm makes use of 2 loops where 1 is nested within another. Both loops repeat N times where N is the array size (number of array elements) even when the array is already sorted.",
-                "d": "Although the array is already sorted, the regular algorithm will repeat both loops N times each as in the standard case and hence have the normal complexity."
-            },
-            "difficulty": "beginner"
-        },
-        {
-            "question": "2. Consider the following array: <br> A = [-10, 100, 1, 0, 9, 1*] <br> Note that the \u2018*\u2019 is used to mark a distinction between the two 1\u2019s in order to keep track of their order while sorting. What will be the final output of the algorithm for this array (assume ascending order sort)?",
-            "answers": {
-                "a": "[-10, 0, 1, 1*, 9, 100]",
-                "b": "[-10, 0, 1*, 1, 9, 100]",
-                "c": "[100, 9, 1, 1*, 0, -10]",
-                "d": "[100, 9, 1*, 1, 0, -10]"
-            },
-            "correctAnswer": "a",
-            "explanations": {},
-            "difficulty": "beginner"
-        },
-        {
-            "question": "3. What is the time complexity of the algorithm in the worst case?",
-            "answers": {
-                "a": "O(N)",
-                "b": "O(N^2)",
-                "c": "O(N log (N))",
-                "d": "O(N!)"
-            },
-            "correctAnswer": "b",
-            "explanations": {
-                "a": "The algorithm makes use of 2 loops where 1 is nested within another. Both loops repeat N times where N is the array size (number of array elements).",
-                "c": "The algorithm makes use of 2 loops where 1 is nested within another. Both loops repeat N times where N is the array size (number of array elements).",
-                "d": "The algorithm makes use of 2 loops where 1 is nested within another. Both loops repeat N times where N is the array size (number of array elements)."
-            },
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "4. What will be the space complexity of the bubble sort algorithm?",
-            "answers": {
-                "a": "O(N)",
-                "b": "O(2^N)",
-                "c": "O(1)",
-                "d": "O(N^2)"
-            },
-            "correctAnswer": "c",
-            "explanations": {
-                "a": "No extra space/memory is used besides that already used to store the original array and the temporary variable used to swap array elements. The sorting is directly done on the original array instead of storing the newly sorted array in a separate memory segment.",
-                "b": "No extra space/memory is used besides that already used to store the original array and the temporary variable used to swap array elements. The sorting is directly done on the original array.",
-                "c": "No extra space/memory is used besides that already used to store the original array and the temporary variable used to swap array elements. The sorting is directly done on the original array. This notation is used to specify constant space complexity.",
-                "d": "This is the time complexity of the algorithm which specifies how long it will take to sort the array and is not the space complexity which specifies the amount of extra memory used by the algorithm. No extra space/memory is used besides that already used to store the original array and the temporary variable used to swap array elements. The sorting is directly done on the original array."
-            },
-            "difficulty": "beginner"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What will be the time complexity of the regular unoptimized bubble sort algorithm in the best case, i.e, when the input array is already sorted?",
+      "answers": {
+        "a": "O(N)",
+        "b": "O(N^2)",
+        "c": "O(N log (N))",
+        "d": "O(1)"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The algorithm makes use of 2 loops where 1 is nested within another. Both loops repeat N times where N is the array size (number of array elements) even when the array is already sorted.",
+        "b": "Correct. Although the array is already sorted, the regular unoptimized algorithm will repeat both loops N times each as in the standard case and hence have the normal O(N^2) complexity.",
+        "c": "Incorrect. The algorithm makes use of 2 loops where 1 is nested within another. Both loops repeat N times where N is the array size (number of array elements) even when the array is already sorted.",
+        "d": "Incorrect. Although the array is already sorted, the regular algorithm will repeat both loops N times each as in the standard case and hence have the normal complexity."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Consider the following array: <br> A = [-10, 100, 1, 0, 9, 1*] <br> Note that the '*' is used to mark a distinction between the two 1's in order to keep track of their order while sorting. What will be the final output of the algorithm for this array (assume ascending order sort)?",
+      "answers": {
+        "a": "[-10, 0, 1, 1*, 9, 100]",
+        "b": "[-10, 0, 1*, 1, 9, 100]",
+        "c": "[100, 9, 1, 1*, 0, -10]",
+        "d": "[100, 9, 1*, 1, 0, -10]"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Bubble sort is a stable algorithm, meaning equal elements maintain their relative order. The original '1' appears before '1*' in the input, so it remains before '1*' in the sorted output.",
+        "b": "Incorrect. This violates bubble sort's stability property. The original '1' should remain before '1*' as it appeared first in the input array.",
+        "c": "Incorrect. This array is sorted in descending order, not ascending order as required by the question.",
+        "d": "Incorrect. This array is sorted in descending order, not ascending order as required by the question."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. What is the time complexity of the algorithm in the worst case?",
+      "answers": {
+        "a": "O(N)",
+        "b": "O(N^2)",
+        "c": "O(N log (N))",
+        "d": "O(N!)"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The algorithm makes use of 2 loops where 1 is nested within another. Both loops repeat N times where N is the array size (number of array elements).",
+        "b": "Correct. The algorithm makes use of 2 nested loops, each running approximately N times, resulting in O(N^2) time complexity in the worst case.",
+        "c": "Incorrect. The algorithm makes use of 2 loops where 1 is nested within another. Both loops repeat N times where N is the array size (number of array elements).",
+        "d": "Incorrect. The algorithm makes use of 2 loops where 1 is nested within another. Both loops repeat N times where N is the array size (number of array elements)."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. What will be the space complexity of the bubble sort algorithm?",
+      "answers": {
+        "a": "O(N)",
+        "b": "O(2^N)",
+        "c": "O(1)",
+        "d": "O(N^2)"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. No extra space/memory is used besides that already used to store the original array and the temporary variable used to swap array elements. The sorting is directly done on the original array instead of storing the newly sorted array in a separate memory segment.",
+        "b": "Incorrect. No extra space/memory is used besides that already used to store the original array and the temporary variable used to swap array elements. The sorting is directly done on the original array.",
+        "c": "Correct. No extra space/memory is used besides that already used to store the original array and the temporary variable used to swap array elements. The sorting is directly done on the original array. This notation is used to specify constant space complexity.",
+        "d": "Incorrect. This is the time complexity of the algorithm which specifies how long it will take to sort the array and is not the space complexity which specifies the amount of extra memory used by the algorithm. No extra space/memory is used besides that already used to store the original array and the temporary variable used to swap array elements. The sorting is directly done on the original array."
+      },
+      "difficulty": "beginner"
+    }
+  ]
 }
-   
