@@ -41,14 +41,16 @@
         "a": "[9, -1, -10, 9*, 2] → [-1, -10, 9, 2, 9*] → [-10, -1, 2, 9, 9*] → [-10, -1, 2, 9, 9*] → [-10, -1, 2, 9, 9*]",
         "b": "[9, -1, -10, 9*, 2] → [-1, -10, 9*, 2, 9] → [-10, -1, 2, 9, 9*] → [-10, -1, 2, 9*, 9] → [-10, -1, 2, 9, 9*]",
         "c": "[9, -1, -10, 9*, 2] → [-1, -10, 2, 9, 9*] → [-10, -1, 2, 9, 9*] → [-10, -1, 2, 9, 9*] → [-10, -1, 2, 9, 9*]",
-        "d": "[9, -1, -10, 9*, 2] → [9, -1, 9*, 2, -10] → [9, 9*, 2, -1, -10] → [9, 9*, 2, -1, -10] → [9, 9*, 2, -1, -10]"
+        "d": "[9, -1, -10, 9*, 2] → [9, -1, 9*, 2, -10] → [9, 9*, 2, -1, -10] → [9, 9*, 2, -1, -10] → [9, 9*, 2, -1, -10]",
+        "e": "[9, -1, -10, 9*, 2] → [9, -1, -10, 2, 9*] → [-1, -10, 9, 2, 9*] → [-1, -10, 2, 9, 9*] → [-10, -1, 2, 9, 9*]"
       },
-      "correctAnswer": "b",
+      "correctAnswer": "e",
       "explanations": {
         "a": "Incorrect. This shows the original 9 moving before 9*, which violates bubble sort's stability property. Equal elements should maintain their relative order.",
-        "b": "Correct. This correctly shows bubble sort maintaining stability - 9* stays before the original 9 throughout the sorting process, and the final sorted array is [-10, -1, 2, 9*, 9].",
+        "b": "Incorrect. The first step breaks stability: 9* jumps before 9, which is not allowed in bubble sort, as it is a stable sorting algorithm.",
         "c": "Incorrect. This skips intermediate steps and doesn't show the proper bubble sort progression. The transitions are too large for single bubble sort iterations.",
-        "d": "Incorrect. This shows sorting in the wrong direction (elements moving right instead of being properly sorted in ascending order)."
+        "d": "Incorrect. This shows sorting in the wrong direction (elements moving right instead of being properly sorted in ascending order).",
+        "e": "Correct. This correctly shows bubble sort maintaining stability - 9 stays before 9* throughout the sorting process, and the final sorted array is [-10, -1, 2, 9, 9*]."
       },
       "difficulty": "advanced"
     }
