@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. Which of the following represents a homogeneous array (all elements of the same type)?",
+      "question": "1. Which of the following represents a homogeneous array (an array in which all elements are of the same type)?",
       "answers": {
         "a": "[1, 4, 3, 10]",
         "b": "['A', 3, 0, \"Hello world\"]",
@@ -11,15 +11,15 @@
       },
       "correctAnswer": "a",
       "explanations": {
-        "a": "Correct. This is a homogeneous array with all integer elements.",
-        "b": "Incorrect. This array contains mixed types (character, integer, and string).",
-        "c": "Incorrect. This array contains mixed types (strings, boolean, and character).",
-        "d": "Incorrect. This array contains mixed types (boolean, integer, and float)."
+        "a": "Correct. This is a homogeneous array because all the elements are integers.",
+        "b": "Incorrect. This array contains elements of different types, including a character, an integer, and a string.",
+        "c": "Incorrect. This array contains elements of different types, including strings, a boolean, and a character.",
+        "d": "Incorrect. This array contains elements of different types, including booleans, integers, and a floating-point value."
       },
       "difficulty": "beginner"
     },
     {
-      "question": "2. Which of the following is an array sorted in ascending order?",
+      "question": "2. Which of the following arrays is sorted in ascending order?",
       "answers": {
         "a": "1, 4, 5, -10",
         "b": "-10, -13, 15, 100",
@@ -28,10 +28,10 @@
       },
       "correctAnswer": "c",
       "explanations": {
-        "a": "Incorrect. -10 must appear at the beginning and not the end as it is the smallest element.",
-        "b": "Incorrect. -13 is smaller than -10, so they must be swapped.",
-        "c": "Correct. This array is properly sorted in ascending order: -1000 < 0 < 14 < 27.",
-        "d": "Incorrect. This sequence is in descending order and must be reversed."
+        "a": "Incorrect. The last element, -10, is smaller than the elements before it, so the sequence is not in ascending order.",
+        "b": "Incorrect. The second element, -13, is smaller than the first element, -10, so the sequence is not in ascending order.",
+        "c": "Correct. Each element is greater than the one before it: -1000 < 0 < 14 < 27.",
+        "d": "Incorrect. Each element is smaller than the one before it, so the sequence is in descending order."
       },
       "difficulty": "beginner"
     },
@@ -45,15 +45,15 @@
       },
       "correctAnswer": "d",
       "explanations": {
-        "a": "Incorrect. This is a popular sorting algorithm which is covered by this very experiment.",
-        "b": "Incorrect. This is another popular sorting algorithm.",
-        "c": "Incorrect. This is another popular sorting algorithm.",
-        "d": "Correct. Binary search is not a sorting algorithm but is in fact an algorithm to search for a specific element in a sorted array."
+        "a": "Incorrect. Bubble Sort is a sorting algorithm that repeatedly compares adjacent elements.",
+        "b": "Incorrect. Selection Sort is a sorting algorithm that repeatedly selects an element for its correct position.",
+        "c": "Incorrect. Merge Sort is a sorting algorithm based on the divide-and-conquer approach.",
+        "d": "Correct. Binary Search is a searching algorithm used to find an element in a sorted array; it is not a sorting algorithm."
       },
       "difficulty": "beginner"
     },
     {
-      "question": "4. Consider the following array: A = [-1, 9, 4, 8] Identify A[2], i.e, the element with index 2 from the following (assume 0-indexed array).",
+      "question": "4. Consider the following array: A = [-1, 9, 4, 8]. Identify A[2], i.e., the element at index 2, assuming 0-based indexing.",
       "answers": {
         "a": "-1",
         "b": "9",
@@ -62,15 +62,15 @@
       },
       "correctAnswer": "c",
       "explanations": {
-        "a": "Incorrect. Array indexing begins at 0 and this is the 0th element, i.e, A[0].",
-        "b": "Incorrect. Array indexing begins at 0 and this is the element with index 1, i.e, A[1].",
-        "c": "Correct. Array indexing begins at 0 and this is the element with index 2, i.e, A[2].",
-        "d": "Incorrect. Array indexing begins at 0 and this is the element with index 3, i.e, A[3]."
+        "a": "Incorrect. With 0-based indexing, -1 is the element at index 0, i.e., A[0].",
+        "b": "Incorrect. With 0-based indexing, 9 is the element at index 1, i.e., A[1].",
+        "c": "Correct. With 0-based indexing, 4 is the element at index 2, i.e., A[2].",
+        "d": "Incorrect. With 0-based indexing, 8 is the element at index 3, i.e., A[3]."
       },
       "difficulty": "beginner"
     },
     {
-      "question": "5. Consider the following pseudo-code:<br> <pre class=\"tab\"><code>for i = 0 to 2<br>  for j = 0 to i<br>    print \"*\"<br>  print newline<br>end </code></pre> Predict the output of the above code.",
+      "question": "5. Consider the following pseudo-code:<br><pre class=\"tab\"><code>for i = 0 to 2<br>  for j = 0 to i<br>    print \"*\"<br>  print newline<br>end</code></pre> Predict the output of the above code.",
       "answers": {
         "a": "<br>*<br>**<br>***",
         "b": "<br>*<br>*<br>*",
@@ -79,10 +79,78 @@
       },
       "correctAnswer": "a",
       "explanations": {
-        "a": "Correct. When i=0, j loops once (0 to 0) printing 1 asterisk. When i=1, j loops twice (0 to 1) printing 2 asterisks. When i=2, j loops three times (0 to 2) printing 3 asterisks.",
-        "b": "Incorrect. This output ignores the inner j loop which determines how many asterisks are printed per line.",
-        "c": "Incorrect. This output shows reverse order, which would require the loop condition to be different.",
-        "d": "Incorrect. This output ignores the newline printing after each iteration of the outer loop."
+        "a": "Correct. When i = 0, the inner loop prints 1 asterisk. When i = 1, it prints 2 asterisks. When i = 2, it prints 3 asterisks. A newline is printed after each outer-loop iteration.",
+        "b": "Incorrect. This output shows one asterisk on each line, but the number of inner-loop iterations increases with the value of i.",
+        "c": "Incorrect. This output has the number of asterisks decreasing on successive lines, which does not match the increasing inner-loop range.",
+        "d": "Incorrect. This output places all six asterisks on one line, but the pseudo-code prints a newline after each outer-loop iteration."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "6. In Bubble Sort, what is the main operation performed on two adjacent elements during a pass?",
+      "answers": {
+        "a": "They are compared and swapped if they are in the wrong order.",
+        "b": "They are always swapped, regardless of their values.",
+        "c": "Only the smaller element is removed from the array.",
+        "d": "The two elements are replaced by their average."
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Bubble Sort compares adjacent elements and swaps them when their order does not match the required sorting order.",
+        "b": "Incorrect. Swapping every adjacent pair would change elements even when they are already in the required order.",
+        "c": "Incorrect. Bubble Sort does not remove elements from the array during sorting.",
+        "d": "Incorrect. Bubble Sort does not replace adjacent elements with their average."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. For an ascending Bubble Sort, what happens to the largest element during one complete pass through the unsorted portion of the array?",
+      "answers": {
+        "a": "It moves to the beginning of the array.",
+        "b": "It is removed from the array.",
+        "c": "It moves toward the end of the unsorted portion and reaches its correct position.",
+        "d": "It always remains in its original position."
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. In an ascending pass, larger elements move toward the end rather than toward the beginning.",
+        "b": "Incorrect. Bubble Sort rearranges elements but does not remove them.",
+        "c": "Correct. Through successive adjacent swaps, the largest element in the unsorted portion moves to its correct position at the end of that portion.",
+        "d": "Incorrect. The largest element may move several positions as it is compared with adjacent elements."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. Consider the array A = [5, 2, 4]. What is the array after the first complete pass of Bubble Sort in ascending order?",
+      "answers": {
+        "a": "[2, 5, 4]",
+        "b": "[2, 4, 5]",
+        "c": "[5, 4, 2]",
+        "d": "[4, 2, 5]"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. This is the state after comparing and swapping only the first adjacent pair; the remaining adjacent pair has not yet been processed.",
+        "b": "Correct. The comparisons produce [2, 5, 4] and then [2, 4, 5], so the first complete pass ends with [2, 4, 5].",
+        "c": "Incorrect. This order is descending rather than ascending.",
+        "d": "Incorrect. This arrangement does not result from the adjacent comparisons of a complete ascending pass."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. If an array contains N elements, how many adjacent pairs are there when considering the entire array once?",
+      "answers": {
+        "a": "N",
+        "b": "N + 1",
+        "c": "N - 1",
+        "d": "N - 2"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. There is no adjacent pair beginning at the final element because it has no element after it.",
+        "b": "Incorrect. Adding one to the array size would exceed the number of positions where an adjacent pair can begin.",
+        "c": "Correct. An array of N elements has N - 1 adjacent pairs: (0,1), (1,2), through (N-2,N-1).",
+        "d": "Incorrect. This omits one valid adjacent pair from the array."
       },
       "difficulty": "advanced"
     }

@@ -2,55 +2,155 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. Which of the following statements is true (assume ascending sort order)?",
+      "question": "1. Which of the following statements is true for Bubble Sort in ascending order?",
       "answers": {
-        "a": "After T iterations, atleast T of the smallest elements will be in their correct positions.",
-        "b": "After T iterations, atleast T random elements will be in their correct positions.",
+        "a": "After T iterations, at least T of the smallest elements will be in their correct positions.",
+        "b": "After T iterations, at least T random elements will be in their correct positions.",
         "c": "After T iterations, a random number of elements will be in their correct positions.",
-        "d": "After T iterations, atleast T of the largest elements will be in their correct positions."
+        "d": "After T iterations, at least T of the largest elements will be in their correct positions."
       },
       "correctAnswer": "d",
       "explanations": {
-        "a": "Incorrect. In bubble sort (ascending order), the largest elements bubble to the end, not the smallest elements to the beginning.",
-        "b": "Incorrect. The elements that reach their correct positions are not random - they follow a specific pattern.",
-        "c": "Incorrect. The number of correctly positioned elements after T iterations is predictable, not random.",
-        "d": "Correct. In bubble sort for ascending order, after each iteration, the largest remaining element moves to its correct position at the end. After T iterations, at least T of the largest elements will be correctly positioned."
+        "a": "Incorrect. In ascending Bubble Sort, the largest remaining elements move to the end during successive passes.",
+        "b": "Incorrect. The elements that reach their final positions follow the behavior of the algorithm rather than being selected randomly.",
+        "c": "Incorrect. Bubble Sort has a predictable progression in which elements reach their final positions during passes.",
+        "d": "Correct. In ascending Bubble Sort, each complete pass places the largest remaining element at the end of the unsorted portion. Therefore, after T passes, at least T largest elements are in their final positions."
       },
       "difficulty": "intermediate"
     },
     {
-      "question": "2. To sort an array in descending order, when will we swap two adjacent elements under consideration?",
+      "question": "2. To sort an array in descending order using Bubble Sort, when should two adjacent elements be swapped?",
       "answers": {
-        "a": "When the ith element is lesser than the (i + 1)th element.",
+        "a": "When the ith element is less than the (i + 1)th element.",
         "b": "When the ith element is equal to the (i + 1)th element.",
         "c": "When the ith element is greater than the (i + 1)th element.",
         "d": "None of the above."
       },
       "correctAnswer": "a",
       "explanations": {
-        "a": "Correct. For descending order, we want larger elements first. If the current element is smaller than the next element, we swap them to move the larger element towards the front.",
-        "b": "Incorrect. When elements are equal, no swap is needed as their relative order doesn't matter for sorting.",
-        "c": "Incorrect. If the current element is already greater than the next element, they are in the correct order for descending sort.",
-        "d": "Incorrect. Option (a) correctly describes when to swap for descending order."
+        "a": "Correct. For descending order, the larger element should come first. Therefore, the adjacent elements are swapped when the left element is smaller than the right element.",
+        "b": "Incorrect. Equal elements are already equivalent in value, so swapping them is unnecessary.",
+        "c": "Incorrect. If the left element is greater than the right element, the pair is already in the required descending order.",
+        "d": "Incorrect. A valid condition for swapping in descending Bubble Sort is given among the listed options."
       },
       "difficulty": "beginner"
     },
     {
-      "question": "3. Consider the following array: <br> A = [9, -1, -10, 9*, 2] <br> Note that the '*' is used to mark a distinction between the two 9's in order to keep track of their order while sorting. Which of the following represents the steps in sorting the above array (assume ascending order)?",
+      "question": "3. Consider the following array: <br>A = [9, -1, -10, 9*, 2]<br>Here, '*' distinguishes the two 9s so that their relative order can be tracked while sorting. Which of the following represents the sequence of arrays after successive complete passes of Bubble Sort in ascending order?",
       "answers": {
         "a": "[9, -1, -10, 9*, 2] → [-1, -10, 9, 2, 9*] → [-10, -1, 2, 9, 9*] → [-10, -1, 2, 9, 9*] → [-10, -1, 2, 9, 9*]",
         "b": "[9, -1, -10, 9*, 2] → [-1, -10, 9*, 2, 9] → [-10, -1, 2, 9, 9*] → [-10, -1, 2, 9*, 9] → [-10, -1, 2, 9, 9*]",
         "c": "[9, -1, -10, 9*, 2] → [-1, -10, 2, 9, 9*] → [-10, -1, 2, 9, 9*] → [-10, -1, 2, 9, 9*] → [-10, -1, 2, 9, 9*]",
-        "d": "[9, -1, -10, 9*, 2] → [9, -1, 9*, 2, -10] → [9, 9*, 2, -1, -10] → [9, 9*, 2, -1, -10] → [9, 9*, 2, -1, -10]",
-        "e": "[9, -1, -10, 9*, 2] → [9, -1, -10, 2, 9*] → [-1, -10, 9, 2, 9*] → [-1, -10, 2, 9, 9*] → [-10, -1, 2, 9, 9*]"
+        "d": "[9, -1, -10, 9*, 2] → [9, -1, -10, 2, 9*] → [-1, -10, 9, 2, 9*] → [-1, -10, 2, 9, 9*] → [-10, -1, 2, 9, 9*]"
       },
-      "correctAnswer": "e",
+      "correctAnswer": "d",
       "explanations": {
-        "a": "Incorrect. This shows the original 9 moving before 9*, which violates bubble sort's stability property. Equal elements should maintain their relative order.",
-        "b": "Incorrect. The first step breaks stability: 9* jumps before 9, which is not allowed in bubble sort, as it is a stable sorting algorithm.",
-        "c": "Incorrect. This skips intermediate steps and doesn't show the proper bubble sort progression. The transitions are too large for single bubble sort iterations.",
-        "d": "Incorrect. This shows sorting in the wrong direction (elements moving right instead of being properly sorted in ascending order).",
-        "e": "Correct. This correctly shows bubble sort maintaining stability - 9 stays before 9* throughout the sorting process, and the final sorted array is [-10, -1, 2, 9, 9*]."
+        "a": "Incorrect. The sequence does not correctly show the array after each complete pass; its first transition does not match the adjacent comparisons performed by Bubble Sort.",
+        "b": "Incorrect. The sequence changes the relative order of the two equal 9s, which is inconsistent with stable Bubble Sort when equal elements are not swapped.",
+        "c": "Incorrect. The sequence skips an intermediate state that occurs during the first complete pass.",
+        "d": "Correct. Each transition follows the adjacent comparisons of a complete ascending pass, and the two equal 9s remain in their original relative order."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "4. What is the primary purpose of comparing adjacent elements in Bubble Sort?",
+      "answers": {
+        "a": "To remove duplicate elements.",
+        "b": "To identify whether the entire array is homogeneous.",
+        "c": "To determine whether the adjacent elements need to be swapped to move them toward the required order.",
+        "d": "To calculate the average of the adjacent elements."
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Bubble Sort rearranges elements but does not remove duplicates.",
+        "b": "Incorrect. Whether elements have the same data type is unrelated to the adjacent comparison used for sorting.",
+        "c": "Correct. Comparing adjacent elements determines whether their order is incorrect and whether a swap is needed.",
+        "d": "Incorrect. Bubble Sort does not calculate averages as part of its sorting operation."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. What is the result of the first complete ascending Bubble Sort pass on A = [4, 1, 3, 2]?",
+      "answers": {
+        "a": "[1, 3, 2, 4]",
+        "b": "[1, 2, 3, 4]",
+        "c": "[4, 1, 2, 3]",
+        "d": "[3, 1, 2, 4]"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The pass compares adjacent elements and moves 4 to the end, producing [1, 3, 2, 4].",
+        "b": "Incorrect. This is the fully sorted array, but one complete pass does not necessarily sort all remaining elements.",
+        "c": "Incorrect. This sequence does not reflect the result of all adjacent comparisons in the first pass.",
+        "d": "Incorrect. The first comparison moves 4 past 1, so the first element cannot remain 3 in the resulting array."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. If no swaps occur during a complete pass of Bubble Sort, what does this indicate?",
+      "answers": {
+        "a": "The array contains no elements.",
+        "b": "The array is already sorted in the required order.",
+        "c": "The largest element has been deleted.",
+        "d": "Every element has been swapped."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. A non-empty array can complete a pass without requiring any swaps.",
+        "b": "Correct. If no adjacent pair is out of order during the pass, the array is already sorted in the required order.",
+        "c": "Incorrect. Bubble Sort does not delete elements when it completes a pass.",
+        "d": "Incorrect. No swaps occurring means that no adjacent pair required an exchange during the pass."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. Which statement correctly describes the role of the outer loop in Bubble Sort?",
+      "answers": {
+        "a": "It repeatedly performs passes over the unsorted portion of the array.",
+        "b": "It stores the array elements in a separate array.",
+        "c": "It searches for a specific value using binary search.",
+        "d": "It removes the largest element after each comparison."
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The outer loop controls repeated passes through the array so that elements can progressively reach their correct positions.",
+        "b": "Incorrect. The outer loop controls the passes and does not create a separate copy of the array.",
+        "c": "Incorrect. Binary Search is a separate searching algorithm and is not the purpose of the Bubble Sort outer loop.",
+        "d": "Incorrect. Bubble Sort moves elements to their positions but does not remove them."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. In ascending Bubble Sort, after the first complete pass, which element is guaranteed to be in its final position?",
+      "answers": {
+        "a": "The smallest element",
+        "b": "The second-smallest element",
+        "c": "The largest element",
+        "d": "The middle element"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The smallest element may still need to move toward the beginning in later comparisons.",
+        "b": "Incorrect. There is no general guarantee that the second-smallest element reaches its final position after the first pass.",
+        "c": "Correct. During an ascending pass, the largest element bubbles toward the end and reaches its final position.",
+        "d": "Incorrect. The middle element is not generally guaranteed to be in its final position after one pass."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. Which statement about Bubble Sort is correct?",
+      "answers": {
+        "a": "It always uses O(N) extra memory.",
+        "b": "It can be implemented in place using a constant amount of auxiliary space.",
+        "c": "It requires a sorted input array before it can run.",
+        "d": "It can sort an array only when all elements are distinct."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. An in-place implementation does not require an additional array whose size grows with N.",
+        "b": "Correct. Bubble Sort can rearrange the elements within the original array and use only a fixed amount of extra storage for operations such as swapping.",
+        "c": "Incorrect. Bubble Sort is designed to sort arrays that are not already sorted.",
+        "d": "Incorrect. Bubble Sort can sort arrays containing duplicate elements."
       },
       "difficulty": "advanced"
     }
