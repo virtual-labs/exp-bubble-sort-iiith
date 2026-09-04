@@ -2,24 +2,24 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. How many iterations of the outer and inner loops will it take to sort the following array using the optimized algorithm?<br>A = [-4, -9, -1, 8, -9, 4]",
+      "question": "1. How many iterations of the outer loop and how many total iterations of the inner loop are required to sort the following array using the optimized Bubble Sort algorithm?<br>A = [-4, -9, -1, 8, -9, 4]",
       "answers": {
         "a": "Outer = 5, Inner = 14",
-        "b": "Outer = 4, Inner = 12",
-        "c": "Outer = 6, Inner = 15",
+        "b": "Outer = 4, Inner = 14",
+        "c": "Outer = 4, Inner = 12",
         "d": "Outer = 5, Inner = 15"
       },
-      "correctAnswer": "d",
+      "correctAnswer": "b",
       "explanations": {
-        "a": "Incorrect. This doesn't account for all the necessary iterations to fully sort the array.",
-        "b": "Incorrect. More iterations are needed as the array has duplicate values that require careful positioning.",
-        "c": "Incorrect. The outer loop count is too high - the optimized algorithm detects completion earlier.",
-        "d": "Correct. The array requires 5 outer loop iterations (including the final detection iteration) and 15 total inner loop iterations to be fully sorted."
+        "a": "Incorrect. The total number of inner-loop iterations is correct, but the outer loop stops earlier because the fourth pass detects that no swaps are needed.",
+        "b": "Correct. The four passes use 5, 4, 3, and 2 comparisons respectively, for a total of 14 inner-loop iterations. The fourth pass makes no swaps and allows the optimized algorithm to stop.",
+        "c": "Incorrect. The first three passes alone use 5 + 4 + 3 comparisons, but the optimized algorithm performs one additional pass to detect that no swaps occur.",
+        "d": "Incorrect. These values include too many outer-loop and inner-loop iterations for this optimized execution."
       },
       "difficulty": "beginner"
     },
     {
-      "question": "2. Consider the following array:<br>A = [8, 7, -2, 4, 1]<br>Which of the following will represent the array after the 3rd iteration of the algorithm (assume ascending order sort)?",
+      "question": "2. Consider the following array:<br>A = [8, 7, -2, 4, 1]<br>Which of the following represents the array after the 3rd iteration of the algorithm, assuming an ascending-order Bubble Sort?",
       "answers": {
         "a": "[7, -2, 4, 1, 8]",
         "b": "[-2, 4, 1, 7, 8]",
@@ -28,15 +28,15 @@
       },
       "correctAnswer": "c",
       "explanations": {
-        "a": "Incorrect. This represents the array after the 1st iteration.",
-        "b": "Incorrect. This represents the array after the 2nd iteration.",
-        "c": "Correct. This represents the array after the 3rd iteration. The array is completely sorted by the end of the 3rd iteration.",
-        "d": "Incorrect. This represents the array sorted in descending order, not ascending order."
+        "a": "Incorrect. This is the state after the first complete pass, when 8 has moved to the final position.",
+        "b": "Incorrect. This is the state after the second complete pass, before the remaining elements are fully ordered.",
+        "c": "Correct. After the third complete pass, the array is [-2, 1, 4, 7, 8], which is fully sorted in ascending order.",
+        "d": "Incorrect. This sequence is not in ascending order."
       },
       "difficulty": "intermediate"
     },
     {
-      "question": "3. Consider the following array:<br>A = [8, 7, -2, 4, 1]<br>How many swaps occur in the 1st iteration of the outer loop?",
+      "question": "3. Consider the following array:<br>A = [8, 7, -2, 4, 1]<br>How many swaps occur during the 1st iteration of the outer loop?",
       "answers": {
         "a": "0",
         "b": "1",
@@ -45,15 +45,15 @@
       },
       "correctAnswer": "d",
       "explanations": {
-        "a": "Incorrect. The array is not sorted and will require swaps in the first iteration.",
-        "b": "Incorrect. This is fewer swaps than actually occur when moving 8 to its correct position.",
-        "c": "Incorrect. This is still fewer than the actual number of swaps needed.",
-        "d": "Correct. The element '8' will move from the beginning to the end of the array and will require 4 swaps to do so."
+        "a": "Incorrect. The first pass encounters adjacent elements that are out of ascending order.",
+        "b": "Incorrect. More than one adjacent pair is out of order during the first pass.",
+        "c": "Incorrect. The first pass performs one swap for each position that 8 moves past, resulting in more swaps than this.",
+        "d": "Correct. During the first pass, 8 is swapped successively with 7, -2, 4, and 1, so 4 swaps occur."
       },
       "difficulty": "intermediate"
     },
     {
-      "question": "4. Consider the following array:<br>A = [-10, 100, -1000, 2, 0, -1]<br>How many iterations of the outer loop will it take to sort this array as per the optimized bubble sort?",
+      "question": "4. Consider the following array:<br>A = [-10, 100, -1000, 2, 0, -1]<br>How many iterations of the outer loop are required to sort this array using the optimized Bubble Sort algorithm?",
       "answers": {
         "a": "2",
         "b": "3",
@@ -62,12 +62,97 @@
       },
       "correctAnswer": "c",
       "explanations": {
-        "a": "Incorrect. The array will not be completely sorted after only 2 iterations.",
-        "b": "Incorrect. Although the array will be sorted by the end of the 3rd iteration, the optimized algorithm needs one more iteration to detect that no swaps occurred.",
-        "c": "Correct. The array will be sorted after 3 iterations, but the optimized algorithm requires 1 additional iteration where no swaps occur to detect that the array is sorted, totaling 4 iterations.",
-        "d": "Incorrect. The optimized algorithm stops as soon as it detects that no swaps have occurred, which happens before 5 iterations."
+        "a": "Incorrect. The array still contains elements that are out of ascending order after two passes.",
+        "b": "Incorrect. The array becomes sorted during the third pass, but one additional pass is needed to detect that no swaps occur.",
+        "c": "Correct. The array becomes sorted after the third pass, and the fourth pass makes no swaps, so the optimized algorithm stops after 4 outer-loop iterations.",
+        "d": "Incorrect. The optimized algorithm detects that no swaps occur before a fifth pass is needed."
       },
       "difficulty": "advanced"
+    },
+    {
+      "question": "5. Consider the array A = [3, 1, 2]. How many comparisons and swaps occur during the first complete pass of ascending Bubble Sort?",
+      "answers": {
+        "a": "Comparisons = 2, Swaps = 2",
+        "b": "Comparisons = 3, Swaps = 2",
+        "c": "Comparisons = 2, Swaps = 1",
+        "d": "Comparisons = 1, Swaps = 1"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The first pass makes two adjacent comparisons, but only one of those comparisons requires a swap.",
+        "b": "Incorrect. An array of three elements has only two adjacent pairs to compare in one complete pass.",
+        "c": "Correct. The pass compares (3,1) and (3,2), so there are 2 comparisons and only the first comparison causes a swap.",
+        "d": "Incorrect. Both adjacent pairs must be considered during a complete pass."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. Consider the array A = [4, 3, 2, 1]. What is the array after the second complete pass of ascending Bubble Sort?",
+      "answers": {
+        "a": "[2, 1, 3, 4]",
+        "b": "[1, 2, 3, 4]",
+        "c": "[3, 2, 1, 4]",
+        "d": "[2, 3, 1, 4]"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. After the first pass the array is [3, 2, 1, 4], and after the second pass it becomes [2, 1, 3, 4].",
+        "b": "Incorrect. The array is not yet fully sorted after the second pass.",
+        "c": "Incorrect. This is the state after the first pass, not the second pass.",
+        "d": "Incorrect. This arrangement does not result from the adjacent comparisons in the second pass."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "7. Which condition correctly identifies when two adjacent elements should be swapped for an ascending Bubble Sort?",
+      "answers": {
+        "a": "Swap when the left element is greater than the right element.",
+        "b": "Swap when the left element is smaller than the right element.",
+        "c": "Swap whenever the two elements are equal.",
+        "d": "Swap the pair on every comparison."
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. In ascending order, a larger element should come after a smaller element, so an adjacent pair is swapped when the left element is greater than the right element.",
+        "b": "Incorrect. Such a pair is already in the required ascending order.",
+        "c": "Incorrect. Equal elements do not need to be exchanged to establish ascending order.",
+        "d": "Incorrect. Swapping every pair would disturb pairs that are already in the required order."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. If a Bubble Sort pass makes no swaps, what can be concluded about the array for that pass?",
+      "answers": {
+        "a": "The array must contain duplicate elements.",
+        "b": "The array is in the required sorted order.",
+        "c": "The largest element has been removed.",
+        "d": "The algorithm must perform another complete pass."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The presence of duplicate elements does not determine whether swaps occur.",
+        "b": "Correct. If no adjacent pair needs to be swapped during an ascending pass, the array is already in ascending order.",
+        "c": "Incorrect. Bubble Sort does not remove the largest element from the array.",
+        "d": "Incorrect. A pass with no swaps is precisely the condition used by the optimized version to stop early."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "9. Why does Bubble Sort require fewer comparisons in later passes when the sorted portion at the end is excluded?",
+      "answers": {
+        "a": "Because elements in the sorted portion no longer need to be compared.",
+        "b": "Because the array size decreases after each pass.",
+        "c": "Because all elements are removed from the sorted portion.",
+        "d": "Because comparisons are skipped randomly."
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. After each pass, at least one largest element is in its final position, so that sorted portion does not need to be compared again.",
+        "b": "Incorrect. The number of elements in the array remains unchanged throughout sorting.",
+        "c": "Incorrect. Elements remain in the array after reaching their final positions.",
+        "d": "Incorrect. The reduction in comparisons follows the structure of the algorithm and is not random."
+      },
+      "difficulty": "intermediate"
     }
   ]
 }

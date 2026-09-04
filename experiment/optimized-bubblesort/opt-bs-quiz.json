@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. How many iterations of the outer loop are needed by the algorithm when the input array of size N is already sorted?",
+      "question": "1. How many iterations of the outer loop are needed by the optimized Bubble Sort algorithm when the input array of size N is already sorted?",
       "answers": {
         "a": "0",
         "b": "1",
@@ -11,15 +11,15 @@
       },
       "correctAnswer": "b",
       "explanations": {
-        "a": "Incorrect. Although the array is sorted, the algorithm requires one iteration to detect that the array is already sorted by observing that no swaps occur.",
-        "b": "Correct. One iteration is required by the algorithm to detect that the array is sorted by observing that no swaps occur during the iteration.",
-        "c": "Incorrect. This would be the number of iterations in the worst case when the array is in reverse order, not when it's already sorted.",
-        "d": "Incorrect. It is not possible for the outer loop to have more than N iterations even in the worst case."
+        "a": "Incorrect. The algorithm needs to execute one pass to determine that no swaps are required.",
+        "b": "Correct. One outer-loop iteration is sufficient: the pass performs the comparisons, makes no swaps, and the algorithm can then stop.",
+        "c": "Incorrect. The optimized algorithm does not need to perform all N passes when the array is already sorted.",
+        "d": "Incorrect. This is larger than the number of passes needed to detect that an already sorted array requires no swaps."
       },
       "difficulty": "beginner"
     },
     {
-      "question": "2. How many comparisons (same as the number of iterations of the inner loop) are required in the next iteration after T iterations of the outer loop in the optimized algorithm? The array size is N.",
+      "question": "2. How many comparisons (equal to the number of iterations of the inner loop) are required in the next iteration after T iterations of the outer loop in the optimized Bubble Sort algorithm? The array size is N.",
       "answers": {
         "a": "N",
         "b": "N - 1",
@@ -28,29 +28,131 @@
       },
       "correctAnswer": "c",
       "explanations": {
-        "a": "Incorrect. We can never have N comparisons. Generally, we compare adjacent elements and maximum N - 1 such pairs exist for any array of size N.",
-        "b": "Incorrect. We do not need to compare all adjacent elements each time as after each iteration at least one more element ends up in the right place.",
-        "c": "Correct. After T iterations, T largest elements are correctly positioned at the end. In the next iteration, we need N - T - 1 comparisons.",
-        "d": "Incorrect. This doesn't account for the fact that we need one less comparison than the number of unsorted elements."
+        "a": "Incorrect. The inner loop does not need to compare all N positions because adjacent comparisons are performed between pairs of elements.",
+        "b": "Incorrect. This is the maximum number of adjacent comparisons in the first pass, before excluding elements already placed at the end.",
+        "c": "Correct. After T passes, T largest elements are already in their final positions, so the next pass needs N - T - 1 adjacent comparisons.",
+        "d": "Incorrect. The number of adjacent pairs is one less than the number of elements being considered."
       },
       "difficulty": "intermediate"
     },
     {
-      "question": "3. How do we check if our array is sorted in order to preemptively stop the optimized algorithm?",
+      "question": "3. How does the optimized Bubble Sort algorithm check whether it can stop early because the array is already sorted?",
       "answers": {
-        "a": "Run an extra iteration as part of the current iteration and check that all adjacent elements are in the right order.",
-        "b": "Check if any swaps occurred in the current iteration.",
-        "c": "There is no way to preemptively stop the algorithm, i.e, a minimum of N - 1 iterations is required where N is the array size.",
-        "d": "None of the above"
+        "a": "It runs an additional complete pass before checking the array.",
+        "b": "It checks whether any swaps occurred during the current pass.",
+        "c": "It assumes that the array is sorted after N - 1 comparisons.",
+        "d": "It cannot stop early."
       },
       "correctAnswer": "b",
       "explanations": {
-        "a": "Incorrect. While this can be done, there is a more optimal way that doesn't require an extra iteration.",
-        "b": "Correct. We maintain a boolean flag initialized to false at the beginning of each iteration and set it to true whenever a swap occurs. If it remains false at the end of the iteration, no swaps occurred, meaning the array is sorted.",
-        "c": "Incorrect. There is a way to preemptively stop the algorithm when the array becomes sorted before N - 1 iterations.",
-        "d": "Incorrect. Option (b) contains the correct answer."
+        "a": "Incorrect. The optimization uses information from the current pass rather than requiring a separate checking pass.",
+        "b": "Correct. A flag can record whether any swap occurred during the pass. If no swap occurs, the array is already sorted and the algorithm can stop.",
+        "c": "Incorrect. The algorithm does not determine sortedness solely from reaching a fixed number of comparisons.",
+        "d": "Incorrect. Early termination is the main optimization introduced by this version of Bubble Sort."
       },
       "difficulty": "intermediate"
+    },
+    {
+      "question": "4. What is the main advantage of the optimized Bubble Sort over the regular Bubble Sort?",
+      "answers": {
+        "a": "It can stop early when a pass makes no swaps.",
+        "b": "It always sorts the array in O(N) time.",
+        "c": "It requires no comparisons between elements.",
+        "d": "It uses a separate array to store the sorted elements."
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The optimized version can terminate as soon as a complete pass makes no swaps, which is useful when the array becomes sorted early.",
+        "b": "Incorrect. The optimization does not guarantee linear time for every input.",
+        "c": "Incorrect. Comparisons are still required to determine whether adjacent elements are out of order.",
+        "d": "Incorrect. The optimization does not require a separate array; sorting can still be performed in place."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. For an array of N elements, how many comparisons are made in the first pass of the optimized Bubble Sort?",
+      "answers": {
+        "a": "N",
+        "b": "N - 1",
+        "c": "N - 2",
+        "d": "2N"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. An array of N elements contains one fewer adjacent pairs than elements.",
+        "b": "Correct. The first pass compares each adjacent pair, giving N - 1 comparisons.",
+        "c": "Incorrect. This omits one valid adjacent pair from the first pass.",
+        "d": "Incorrect. The first pass does not compare twice as many pairs as the number of elements."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. Suppose the optimized Bubble Sort performs T complete passes without stopping. How many largest elements are guaranteed to be in their final positions after those T passes?",
+      "answers": {
+        "a": "T",
+        "b": "T - 1",
+        "c": "N - T",
+        "d": "N"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Each complete pass places at least one largest remaining element into its final position at the end of the unsorted portion.",
+        "b": "Incorrect. Each pass contributes one newly fixed largest element, not one fewer than the number of passes.",
+        "c": "Incorrect. N - T represents the number of elements remaining outside the fixed suffix, not the number fixed by the passes.",
+        "d": "Incorrect. All N elements are not guaranteed to be in their final positions after only T passes."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "7. Consider A = [1, 2, 3, 4]. What happens during the first pass of optimized Bubble Sort in ascending order?",
+      "answers": {
+        "a": "Every adjacent pair is swapped.",
+        "b": "Only the largest element is removed.",
+        "c": "No swaps occur, so the algorithm can stop after this pass.",
+        "d": "The array is reversed."
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Every adjacent pair is already in ascending order, so exchanges are unnecessary.",
+        "b": "Incorrect. Bubble Sort does not remove elements from the array.",
+        "c": "Correct. All adjacent pairs are already in the required order, so no swaps occur and the optimized algorithm can terminate.",
+        "d": "Incorrect. The algorithm does not reverse an already sorted array."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. Which variable or mechanism is commonly used in an optimized Bubble Sort implementation to detect whether a pass made any swaps?",
+      "answers": {
+        "a": "A boolean swap flag",
+        "b": "A second copy of the entire array",
+        "c": "A binary-search tree",
+        "d": "A recursion stack containing every element"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. A boolean flag can be reset at the start of each pass and set when a swap occurs.",
+        "b": "Incorrect. A full copy of the array is unnecessary for detecting whether a swap occurred.",
+        "c": "Incorrect. A binary-search tree is not needed for this Bubble Sort optimization.",
+        "d": "Incorrect. Storing every element on a recursion stack is unnecessary for this iterative optimization."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. If an optimized Bubble Sort is applied to a reverse-sorted array of N elements, which statement is generally true?",
+      "answers": {
+        "a": "It stops after the first pass because no swaps occur.",
+        "b": "It performs only one comparison.",
+        "c": "It still requires multiple passes because many adjacent elements are out of order.",
+        "d": "It does not perform any swaps."
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. A reverse-sorted array contains many adjacent pairs that are out of ascending order.",
+        "b": "Incorrect. A pass through an array of N elements considers multiple adjacent pairs.",
+        "c": "Correct. Many elements must move toward their correct positions, so the optimized algorithm still needs multiple passes.",
+        "d": "Incorrect. Reordering a reverse-sorted array requires swaps."
+      },
+      "difficulty": "advanced"
     }
   ]
 }
