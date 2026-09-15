@@ -2,24 +2,24 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. What will be the time complexity of the regular unoptimized bubble sort algorithm in the best case, i.e, when the input array is already sorted?",
+      "question": "1. What is the time complexity of the regular, unoptimized Bubble Sort algorithm in the best case, when the input array is already sorted?",
       "answers": {
         "a": "O(N)",
         "b": "O(N^2)",
-        "c": "O(N log (N))",
+        "c": "O(N log N)",
         "d": "O(1)"
       },
       "correctAnswer": "b",
       "explanations": {
-        "a": "Incorrect. The algorithm makes use of 2 loops where 1 is nested within another. Both loops repeat N times where N is the array size (number of array elements) even when the array is already sorted.",
-        "b": "Correct. Although the array is already sorted, the regular unoptimized algorithm will repeat both loops N times each as in the standard case and hence have the normal O(N^2) complexity.",
-        "c": "Incorrect. The algorithm makes use of 2 loops where 1 is nested within another. Both loops repeat N times where N is the array size (number of array elements) even when the array is already sorted.",
-        "d": "Incorrect. Although the array is already sorted, the regular algorithm will repeat both loops N times each as in the standard case and hence have the normal complexity."
+        "a": "Incorrect. In the regular unoptimized version, the nested loops continue to perform the planned comparisons even when the array is already sorted.",
+        "b": "Correct. The regular unoptimized Bubble Sort still performs a quadratic number of comparisons in the best case, giving a time complexity of O(N^2).",
+        "c": "Incorrect. This complexity is associated with algorithms that reduce the problem more substantially than the nested comparisons used by unoptimized Bubble Sort.",
+        "d": "Incorrect. The algorithm still performs comparisons that depend on the number of elements in the array."
       },
       "difficulty": "beginner"
     },
     {
-      "question": "2. Consider the following array: <br> A = [-10, 100, 1, 0, 9, 1*] <br> Note that the '*' is used to mark a distinction between the two 1's in order to keep track of their order while sorting. What will be the final output of the algorithm for this array (assume ascending order sort)?",
+      "question": "2. Consider the following array: <br>A = [-10, 100, 1, 0, 9, 1*]<br>Here, '*' distinguishes the two occurrences of 1 so that their original order can be tracked. What will be the final output of Bubble Sort for this array, assuming ascending order?",
       "answers": {
         "a": "[-10, 0, 1, 1*, 9, 100]",
         "b": "[-10, 0, 1*, 1, 9, 100]",
@@ -28,32 +28,32 @@
       },
       "correctAnswer": "a",
       "explanations": {
-        "a": "Correct. Bubble sort is a stable algorithm, meaning equal elements maintain their relative order. The original '1' appears before '1*' in the input, so it remains before '1*' in the sorted output.",
-        "b": "Incorrect. This violates bubble sort's stability property. The original '1' should remain before '1*' as it appeared first in the input array.",
-        "c": "Incorrect. This array is sorted in descending order, not ascending order as required by the question.",
-        "d": "Incorrect. This array is sorted in descending order, not ascending order as required by the question."
+        "a": "Correct. Bubble Sort is stable when equal elements are not swapped. Since the original 1 appears before 1*, their relative order remains unchanged in the sorted output.",
+        "b": "Incorrect. This places the two equal elements in the opposite relative order from their order in the input.",
+        "c": "Incorrect. This sequence is in descending order rather than ascending order.",
+        "d": "Incorrect. This sequence is in descending order and also changes the relative order of the two equal elements."
       },
       "difficulty": "beginner"
     },
     {
-      "question": "3. What is the time complexity of the algorithm in the worst case?",
+      "question": "3. What is the time complexity of Bubble Sort in the worst case?",
       "answers": {
         "a": "O(N)",
         "b": "O(N^2)",
-        "c": "O(N log (N))",
+        "c": "O(N log N)",
         "d": "O(N!)"
       },
       "correctAnswer": "b",
       "explanations": {
-        "a": "Incorrect. The algorithm makes use of 2 loops where 1 is nested within another. Both loops repeat N times where N is the array size (number of array elements).",
-        "b": "Correct. The algorithm makes use of 2 nested loops, each running approximately N times, resulting in O(N^2) time complexity in the worst case.",
-        "c": "Incorrect. The algorithm makes use of 2 loops where 1 is nested within another. Both loops repeat N times where N is the array size (number of array elements).",
-        "d": "Incorrect. The algorithm makes use of 2 loops where 1 is nested within another. Both loops repeat N times where N is the array size (number of array elements)."
+        "a": "Incorrect. Bubble Sort may need many comparisons and swaps across multiple passes, so its running time grows faster than linearly.",
+        "b": "Correct. In the worst case, Bubble Sort performs a quadratic number of comparisons and can perform a quadratic number of swaps, giving O(N^2) time complexity.",
+        "c": "Incorrect. Bubble Sort does not reduce the problem size in the manner required for O(N log N) time complexity.",
+        "d": "Incorrect. The number of operations in Bubble Sort does not grow factorially with N."
       },
       "difficulty": "intermediate"
     },
     {
-      "question": "4. What will be the space complexity of the bubble sort algorithm?",
+      "question": "4. What is the auxiliary space complexity of the Bubble Sort algorithm when sorting the array in place?",
       "answers": {
         "a": "O(N)",
         "b": "O(2^N)",
@@ -62,12 +62,97 @@
       },
       "correctAnswer": "c",
       "explanations": {
-        "a": "Incorrect. No extra space/memory is used besides that already used to store the original array and the temporary variable used to swap array elements. The sorting is directly done on the original array instead of storing the newly sorted array in a separate memory segment.",
-        "b": "Incorrect. No extra space/memory is used besides that already used to store the original array and the temporary variable used to swap array elements. The sorting is directly done on the original array.",
-        "c": "Correct. No extra space/memory is used besides that already used to store the original array and the temporary variable used to swap array elements. The sorting is directly done on the original array. This notation is used to specify constant space complexity.",
-        "d": "Incorrect. This is the time complexity of the algorithm which specifies how long it will take to sort the array and is not the space complexity which specifies the amount of extra memory used by the algorithm. No extra space/memory is used besides that already used to store the original array and the temporary variable used to swap array elements. The sorting is directly done on the original array."
+        "a": "Incorrect. Bubble Sort does not require an additional array whose size grows with N.",
+        "b": "Incorrect. Bubble Sort does not allocate an exponentially growing amount of auxiliary memory.",
+        "c": "Correct. Bubble Sort sorts the array in place and uses only a constant amount of extra space, such as a temporary variable for swapping.",
+        "d": "Incorrect. This describes neither the auxiliary space requirement nor the memory used by the in-place swapping process."
       },
       "difficulty": "beginner"
+    },
+    {
+      "question": "5. Which characteristic of Bubble Sort explains why equal elements can retain their original relative order?",
+      "answers": {
+        "a": "It always moves equal elements to the beginning.",
+        "b": "It swaps equal adjacent elements on every comparison.",
+        "c": "It removes duplicate elements before sorting.",
+        "d": "It does not swap adjacent elements when they are equal."
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. Bubble Sort does not move all equal elements to the beginning.",
+        "b": "Incorrect. Swapping equal elements could change their relative order.",
+        "c": "Incorrect. Bubble Sort sorts all elements, including duplicates, without removing them.",
+        "d": "Correct. When equal adjacent elements are not swapped, their relative order is preserved, which makes Bubble Sort stable."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. Which statement best describes the difference between regular and optimized Bubble Sort?",
+      "answers": {
+        "a": "The optimized version can stop early when a complete pass makes no swaps.",
+        "b": "The optimized version changes Bubble Sort into Merge Sort.",
+        "c": "The optimized version requires an additional array for every pass.",
+        "d": "The optimized version never performs swaps."
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The optimized version tracks whether a swap occurred during a pass and can terminate when no swap is needed.",
+        "b": "Incorrect. Optimization does not change the sorting algorithm into a different sorting method.",
+        "c": "Incorrect. The optimization is based on tracking whether swaps occur and does not require a separate array for every pass.",
+        "d": "Incorrect. The optimized version still performs swaps when adjacent elements are out of order."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. In an ascending Bubble Sort, approximately how many comparisons are performed over all passes in the worst case for an array of N elements?",
+      "answers": {
+        "a": "N",
+        "b": "N(N - 1) / 2",
+        "c": "2N",
+        "d": "N!"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. A complete sort requires comparisons across multiple passes, not just one comparison per element.",
+        "b": "Correct. The comparison counts are approximately (N - 1) + (N - 2) + ... + 1, which sum to N(N - 1) / 2.",
+        "c": "Incorrect. A linear multiple of N is not sufficient to represent the comparisons made across all worst-case passes.",
+        "d": "Incorrect. The number of comparisons grows quadratically rather than factorially."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. Why does Bubble Sort have O(1) auxiliary space complexity when implemented in place?",
+      "answers": {
+        "a": "Because it creates a copy of the entire array only once.",
+        "b": "Because it uses a recursive call for every element.",
+        "c": "Because it only needs a fixed number of temporary variables for operations such as swapping.",
+        "d": "Because it stores every intermediate array state."
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Creating a full copy of the array would require auxiliary space that grows with N.",
+        "b": "Incorrect. Recursive calls can require additional stack space, and they are not what gives in-place Bubble Sort its constant auxiliary space.",
+        "c": "Correct. The algorithm modifies the original array and needs only a fixed amount of additional storage, such as a temporary variable used during a swap.",
+        "d": "Incorrect. Storing every intermediate state would require additional memory that grows with the input size."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. Which input arrangement generally causes the largest number of swaps in standard ascending Bubble Sort?",
+      "answers": {
+        "a": "An already sorted array",
+        "b": "An array with all equal elements",
+        "c": "An array in reverse-sorted order",
+        "d": "An array containing a single element"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. In an already sorted array, adjacent elements are already in the required order, so swaps are not needed.",
+        "b": "Incorrect. Equal adjacent elements do not need to be swapped for ascending order.",
+        "c": "Correct. In reverse-sorted order, many pairs are out of order, causing Bubble Sort to perform the largest number of swaps.",
+        "d": "Incorrect. A single-element array has no adjacent pair to swap."
+      },
+      "difficulty": "advanced"
     }
   ]
 }

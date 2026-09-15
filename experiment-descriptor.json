@@ -2,6 +2,7 @@
   "unit-type": "lu",
   "label": "Bubble Sort Experiment",
   "basedir": ".",
+  "LaTeXinMD": "true",
   "code-assessment": {
     "include": true,
     "languages": ["javascript"],
@@ -40,8 +41,8 @@
         {
           "unit-type": "aim"
         },
-       
-	{
+
+        {
           "unit-type": "task",
           "label": "Concept",
           "content-type": "video",
@@ -69,22 +70,21 @@
           "source": "simulation/bspractice.html",
           "target": "bspractice.html"
         },
-	{
+        {
           "unit-type": "task",
           "label": "Exercise",
           "content-type": "simulation",
           "source": "simulation/bsexercise.html",
           "target": "bsexercise.html"
         },
-        
-	{
-         "unit-type": "task",
-         "label": "Quiz",
-         "content-type": "assesment",
-         "source": "bubble-sort-quiz.json",
-         "target": "bubble-sort-quiz.html"
-       }
-      
+
+        {
+          "unit-type": "task",
+          "label": "Quiz",
+          "content-type": "assesment",
+          "source": "bubble-sort-quiz.json",
+          "target": "bubble-sort-quiz.html"
+        }
       ]
     },
     {
@@ -95,7 +95,7 @@
         {
           "unit-type": "aim"
         },
-	
+
         {
           "unit-type": "task",
           "label": "Optimization Technique",
@@ -110,14 +110,14 @@
           "source": "simulation/opt-bs-demo.html",
           "target": "opt-bs-demo.html"
         },
-	{
+        {
           "unit-type": "task",
           "label": "Practice",
           "content-type": "simulation",
           "source": "simulation/opt-bs-practice.html",
           "target": "opt-bs-practice.html"
         },
-	{
+        {
           "unit-type": "task",
           "label": "Exercise",
           "content-type": "simulation",
@@ -125,15 +125,15 @@
           "target": "opt-bs-exercise.html"
         },
         {
-         "unit-type": "task",
-         "label": "Quiz",
-         "content-type": "assesment",
-         "source": "opt-bs-quiz.json",
-         "target": "opt-bs-quiz.html"
-       }
+          "unit-type": "task",
+          "label": "Quiz",
+          "content-type": "assesment",
+          "source": "opt-bs-quiz.json",
+          "target": "opt-bs-quiz.html"
+        }
       ]
     },
-        {
+    {
       "unit-type": "lu",
       "label": "Analysis",
       "basedir": "analysis",
@@ -141,7 +141,7 @@
         {
           "unit-type": "aim"
         },
-	{
+        {
           "unit-type": "task",
           "label": "Overview",
           "content-type": "video",
@@ -169,7 +169,7 @@
           "source": "stability-of-bubble-sort.md",
           "target": "stability-of-bubble-sort.html"
         },
-	{
+        {
           "unit-type": "task",
           "label": "Comparison with other Algorithms",
           "content-type": "video",
@@ -185,7 +185,7 @@
         }
       ]
     },
-    
+
     {
       "unit-type": "task",
       "label": "Posttest",
@@ -193,7 +193,7 @@
       "source": "posttest.json",
       "target": "posttest.html"
     },
-       
+
     {
       "unit-type": "task",
       "label": "Further Readings/References",
